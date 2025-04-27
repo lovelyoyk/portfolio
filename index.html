@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Hugo Ribeiro Moraes | Portfólio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+<!-- Loader -->
+<div id="loader" class="fixed inset-0 bg-black flex justify-center items-center z-50">
+  <h1 class="text-3xl animate-pulse">Carregando...</h1>
+</div>
+
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-black/90 backdrop-blur-sm flex justify-around items-center h-16 shadow-md z-40">
+  <a href="#inicio" class="hover:text-cyan-400 transition">Início</a>
+  <a href="#sobre" class="hover:text-cyan-400 transition">Sobre</a>
+  <a href="#projetos" class="hover:text-cyan-400 transition">Projetos</a>
+  <a href="#feedbacks" class="hover:text-cyan-400 transition">Feedbacks</a>
+  <a href="#contato" class="hover:text-cyan-400 transition">Contato</a>
+</nav>
+
+<!-- Início -->
+<section id="inicio" class="min-h-screen flex flex-col justify-center items-center bg-black pt-16">
+  <img src="https://via.placeholder.com/150" alt="Foto Victor" class="rounded-full w-40 h-40 shadow-lg mb-4">
+  <h1 id="typing-text" class="text-4xl font-bold typing"></h1>
+  <p class="mt-4 text-gray-400">Desenvolvedor Full Stack | Node.js, Java, C#, .NET, Python</p>
+</section>
+
+<!-- Sobre -->
+<section id="sobre" class="p-8 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 border-b-2 border-cyan-500">Sobre Mim</h2>
+  <p class="text-lg text-gray-300">
+    Sou desenvolvedor apaixonado por criar soluções de alta qualidade. Atualmente focado em projetos full stack, com experiência em Node.js, Java, C#, Python e muito mais. Busco evoluir constantemente, aprendendo novas tecnologias e contribuindo para projetos de impacto real.
+  </p>
+</section>
+
+<!-- Projetos -->
+<section id="projetos" class="p-8 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 border-b-2 border-cyan-500">Projetos</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+      <h3 class="text-xl font-semibold">ERP Company Manager</h3>
+      <p class="text-gray-400">Sistema de gestão empresarial com Node.js e React.</p>
+      <a href="#" class="text-cyan-400 hover:underline">Ver Detalhes</a>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+      <h3 class="text-xl font-semibold">E-commerce API Secure</h3>
+      <p class="text-gray-400">API RESTful segura para lojas virtuais.</p>
+      <a href="#" class="text-cyan-400 hover:underline">Ver Detalhes</a>
+    </div>
+    <!-- (Adicionar mais projetos depois) -->
+  </div>
+</section>
+
+<!-- Feedbacks -->
+<section id="feedbacks" class="p-8 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 border-b-2 border-cyan-500">Feedbacks</h2>
+  <div class="flex flex-col gap-4">
+    <div class="bg-gray-800 p-4 rounded-lg shadow">
+      <p class="text-gray-300">"Victor é um desenvolvedor focado, comprometido e com sede de aprendizado!" — João Almeida, Tech Lead</p>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg shadow">
+      <p class="text-gray-300">"Demonstra ótimo domínio técnico e capacidade de evolução rápida." — Ana Souza, Desenvolvedora Senior</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="p-8 max-w-6xl mx-auto text-center">
+  <h2 class="text-3xl font-bold mb-6 border-b-2 border-cyan-500">Contato</h2>
+  <p>Email: <a href="mailto:ffxlovely@gmail.com" class="text-cyan-400 hover:underline">ffxlovely@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/5534999471458" class="text-cyan-400 hover:underline" target="_blank">(34) 99947-1458</a></p>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-gray-600 p-4 text-sm">
+  © 2025 Victor Hugo Ribeiro Moraes. Todos os direitos reservados.
+</footer>
+
+<!-- Scripts -->
+<script>
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+  });
+
+  const text = "Victor Hugo Ribeiro Moraes";
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById('typing-text').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 150);
+    }
+  }
+  typeWriter();
+</script>
+
+</body>
+</html>
